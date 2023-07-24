@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CollegeCard = ({collegeData}) => {
-    const { collegeId, collegeImage, collegeName, admissionDates, events, researchHistory, sports } = collegeData;
+    const { _id, collegeId, collegeImage, collegeName, admissionDates, events, researchHistory, sports } = collegeData;
 
     return (
         <div  className="college-card bg-white shadow-lg rounded-lg overflow-hidden">
             <div className="college-image bg-cover bg-center h-56 p-4" style={{ backgroundImage: `url(${collegeImage})` }}>
                 <div className="apply-btn-container flex justify-end">
-                    <Link to={`college/${collegeId}`}> 
+                    <Link to={`college/${_id}`}> 
                         <button className="apply-btn bg-primary text-white px-4 py-2 rounded-md">Details</button>
                     </Link>
                 </div>
